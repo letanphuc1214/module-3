@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css website */
+body{
+    background-color: #ebebeb;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    width: auto;
+}
+.header-logo {
+    width: 100px;
+    height: 100px;
+}
+.header-image{
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+.header-search input{
+    width: 258px;
+    height: 30px;
+    border-radius: 5px;
+    outline-color: #f77802;
+}
+.header-search button{
+    width: 30px;
+    height: 30px;
+    color:  #f77802;
+    border: none;
+}
+.header-search button:hover{
+    border: 1px solid ;
+
+}
+.dropdwn{
+    margin: 0 auto;
+
+}
+nav{
+    height: 60px;
+    background-color: #f77802;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-right: 30px;
+}
+nav ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    padding:  0 15px;
+    color: white;
+    background-color: #f77802;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    background-color: peru;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul ul{
+    position: absolute;
+    /* bottom: 48px; */
+    display: none;
+    top: 60px;
+    text-align: left;
+}
+nav ul ul li {
+    width: 150px;
+    display: list-item;
+    position: relative;
+    float: none;
+}
+.grid {
+    display: flex;
+    height: 405px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: #ebebeb;
+}
+.grid-content-left{
+    width: 20%;
+    margin-right: 5px;
+}
+.grid-content-mid{
+    width: 40%;
+}
+.grid-content-right{
+    width: 20%;
+    margin-left: 5px;
+}
+.content-left-1{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px;
+}
+.content-left-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-left-span-1{
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    top: 345px;
+    left: 145px;
+}
+.content-left-2{
+    width: 100%;
+    height: 200px;
+}
+.content-left-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-left-span-2{
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    left: 145px;
+    bottom: 83px;
+}
+.content-right-1{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px;
+}
+.content-right-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-right-span-1{
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    top: 345px;
+    right: 135px;
+}
+.content-right-2{
+    width: 100%;
+    height: 200px;
+}
+.content-right-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-right-span-2{
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 83px;
+    right: 135px;
+}
+.content-mid{
+    width: 100%;
+    height: 400px;
+}
+.content-mid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-mid-span{
+    position: absolute;
+    z-index: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    left: 26rem;
+    bottom: 85px;
+}
+.update-story{
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    background-color: #ebebeb;
+}
+.header-update{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2556f7;
+}
+.header-update a:hover{
+    color: coral;
+    text-decoration: none;
+}
+.grid-row-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.content-story-1{
+    width: 20%;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.content-story-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 5px;
+}
+.content-story-1 span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.content-story-2{
+    width: 20%;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.content-story-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 5px;
+}
+.content-story-2 span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.content-story-3{
+    width: 20%;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.content-story-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 5px;
+}
+.content-story-3 span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.content-story-4{
+    width: 20%;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.content-story-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 5px;
+}
+.content-story-4 span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.grid-row-2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
