@@ -4,69 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, Tahoma;
-            font-size: 12px;
-        }
-        .header {
-            width: 100%;
-            height: 3rem;
-            background-color: #F5F5F5;
-            border: 1px solid #CDCDCD;
-            position: fixed;
-
-        }
-        .main{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-
-        .left {
-            width: 25%;
-            min-height: 400px;
-            border: 1px solid #CDCDCD;
-            background-color: #004C00;
-            margin-bottom: 5px;
-        }
-
-        .content {
-            width: 50%;
-            min-height: 400px;
-            border: 1px solid #CDCDCD;
-            background-color: blue;
-            margin-bottom: 5px;
-        }
-
-        .right {
-            width: 25%;
-            min-height: 400px;
-            border: 1px solid #CDCDCD;
-            background-color: coral;
-            margin-bottom: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div >
+    <div>
         <div class="header">
-            <div class="logo-search">
+            <div class="logo-input">
+                <div class="logo-search">
+                    <img src="./logofacebook-removebg-preview.png" alt="logo-facebook">
+                </div>
+                <div class="input-search">
+                    <input type="text" placeholder="Tìm kiếm trên facebook">
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-icon">
+                    <div><a href=""><i class="fas fa-home fa-3x"></i></a></div>
+                    <div><a href=""><i class="fas fa-tv fa-3x"></i></a></div>
+                    <div><a href=""><i class="fas fa-users fa-3x"></i></a></div>
+                    <div><a href=""><i class="fas fa-store fa-3x"></i></a></div>
+                    <div><a href=""> <i class="fas fa-gamepad fa-3x"></i></a></div>
 
+                </div>
+            </div>
+            <div class="setting">
+                <div class="setting-icon">
+                    <div><i class="fas fa-plus fa-3x"></i></div>
+                    <div><i class="fab fa-facebook-messenger fa-3x"></i></div>
+                    <div><i class="fas fa-bell fa-3x"></i></div>
+                    <div><i class="fas fa-caret-down fa-3x"></i></div>
+
+                </div>
             </div>
         </div>
-        
+
         <div class="main">
-            <div class="left">left</div>
-            <div class="content">content</div>
-            <div class="right">right</div>
+            <div class="left" style="font-size: 30px;">Nội dung cột bên trái
+            </div>
+            <div class="content">
+                <div class="story">
+                    <div class="grid-story1">
+                        <span>Tạo story</span>
+                    </div>
+                    <div class="grid-story1">
+                        <span>story 1</span>
+                    </div>
+                    <div class="grid-story1">
+                        <span>story 2</span>
+                    </div>
+                    <div class="grid-story1">
+                        <span>story 3</span>
+                    </div>
+                    <div class="grid-story1">
+                        <span>story 4</span>
+                    </div>
+                </div>
+
+                <div class="newfeet">
+                    <p>Nội dung bài viết</p>
+                </div>
+            </div>
+            <div class="right" style="font-size: 30px;">Nội dung cột bên phải</div>
         </div>
     </div>
 </body>
