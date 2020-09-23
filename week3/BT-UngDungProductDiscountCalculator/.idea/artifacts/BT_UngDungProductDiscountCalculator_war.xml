@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BT-UngDungProductDiscountCalculator:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>BT-UngDungProductDiscountCalculator</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="BT-UngDungProductDiscountCalculator-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="BT-UngDungProductDiscountCalculator:war exploded" />
+    </root>
+  </artifact>
+</component>
