@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>TH-UngDungChuyenDoiTienT-JSP</artifactId>
+    <artifactId>TH-UngDungTuDienDonGian-JSP</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>TH-UngDungChuyenDoiTienT-JSP</name>
+    <name>TH-UngDungTuDienDonGian-JSP</name>
     <packaging>war</packaging>
 
     <properties>
