@@ -13,7 +13,7 @@ import java.util.Map;
 @WebServlet(name = "ServletLogin", urlPatterns = "/loginForm")
 public class ServletLogin extends HttpServlet {
     public static Map<String, Customer> listCustomer = new HashMap<>();
-    public void createListInformation(){
+    public void createListInformation()  {
         Customer customer1 = new Customer("Le Tan Phuc", "phuc123@gmail.com", "viet nam", "phuc123456", "phuc");
         Customer customer2 = new Customer("Le Quang Hiep", "hiep123@gmail.com", "lao", "hiep123456", "hiep");
         Customer customer3 = new Customer("Duong Do Nguyen", "nguyen123@gmail.com", "campuchia", "nguyen123456", "nguyen");
