@@ -24,9 +24,6 @@ public class ServletAdd extends HttpServlet {
 
         service.add(customer);
         CustomerService.created = true;
-
-
-
         response.sendRedirect("add.jsp");
 
     }
