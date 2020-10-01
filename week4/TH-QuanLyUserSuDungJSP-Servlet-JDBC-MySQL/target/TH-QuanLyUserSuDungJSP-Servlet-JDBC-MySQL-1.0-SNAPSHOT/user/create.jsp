@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <title>User Management Application</title>
 </head>
 <body>
@@ -21,19 +23,19 @@
             <tr>
                 <th>User Name:</th>
                 <td>
-                    <input type="text" name="name" id="name" size="45"/>
+                    <input type="text" name="name" id="name" size="45" required/>
                 </td>
             </tr>
             <tr>
                 <th>User Email:</th>
                 <td>
-                    <input type="text" name="email" id="email" size="45"/>
+                    <input type="email" name="email" id="email" size="45" required/>
                 </td>
             </tr>
             <tr>
                 <th>Country:</th>
                 <td>
-                    <input type="text" name="country" id="country" size="15"/>
+                    <input type="" name="country" id="country" size="15" required/>
                 </td>
             </tr>
             <tr>

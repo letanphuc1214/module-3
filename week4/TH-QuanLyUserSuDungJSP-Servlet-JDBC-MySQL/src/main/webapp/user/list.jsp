@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <title>User Management Application</title>
 </head>
 <body>
@@ -11,6 +13,10 @@
     <h2>
         <a href="/users?action=create">Add New User</a>
     </h2>
+    <form action="/users?action=search" method="post">
+        <input type="text" name="search">
+        <input type="submit" value="tìm kiếm">
+    </form>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
@@ -35,6 +41,7 @@
             </tr>
         </c:forEach>
     </table>
+    <a href="/users?action=sort">sort users List</a>
 </div>
 </body>
 </html>

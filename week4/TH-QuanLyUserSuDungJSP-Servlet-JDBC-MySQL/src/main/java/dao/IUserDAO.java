@@ -1,4 +1,5 @@
 package dao;
+
 import model.User;
 
 import java.sql.SQLException;
@@ -14,4 +15,15 @@ public interface IUserDAO {
     public boolean deleteUser(int id) throws SQLException;
 
     public boolean updateUser(User user) throws SQLException;
+
+    public List<User> sortUsersByName();
+
+
+    public List<User> searchByCountry(String country);
+
+    public User getUserById(int id);
+
+    public void insertUserStore(User user) throws SQLException;
+
+
 }
