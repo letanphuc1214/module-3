@@ -6,56 +6,54 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <title>User Management Application</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<center>
-    <h1>User Management</h1>
-    <h2>
-        <a href="users?action=users">List All Users</a>
-    </h2>
-</center>
-<div align="center">
-    <form method="post">
-        <table border="1" cellpadding="5">
-            <caption>
-                <h2>
-                    Edit User
-                </h2>
-            </caption>
-            <c:if test="${user != null}">
-                <input type="hidden" name="id" value="<c:out value='${user.id}' />"/>
-            </c:if>
-            <tr>
-                <th>User Name:</th>
-                <td>
-                    <input type="text" name="name" size="45"
-                           value="<c:out value='${user.name}' />"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <th>User Email:</th>
-                <td>
-                    <input type="text" name="email" size="45"
-                           value="<c:out value='${user.email}' />"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <th>Country:</th>
-                <td>
-                    <input type="text" name="country" size="15"
-                           value="<c:out value='${user.country}' />"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Save"/>
-                </td>
-            </tr>
-        </table>
-    </form>
+<div id="editEmployeeModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <c:if test="${user != null}">
+                            <input type="hidden" name="id" value="<c:out value='${user.id}' />"/>
+                        </c:if>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" size="45" value="<c:out value='${user.name}' />"
+                               class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" size="45"
+                               value="<c:out value='${user.email}' />" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" name="country" size="15"
+                               value="<c:out value='${user.country}' />" class="form-control" required/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-info" value="Save">
+                        <a href="${pageContext.request.contextPath}/users?action=users" class="btn btn-info"><span>Cancel</span></a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+
 </body>
 </html>

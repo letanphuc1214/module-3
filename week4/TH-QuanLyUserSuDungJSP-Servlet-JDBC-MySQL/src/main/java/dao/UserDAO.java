@@ -18,7 +18,7 @@ public class UserDAO implements IUserDAO {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
-    private static final String SORT_USERS = "select * from user.users order by name asc;";
+    private static final String SORT_USERS = "select * from users order by users.name COLLATE utf8mb4_0900_ai_ci ASC;";
     private static final String SELECT_SEARCH_USER = "select * from user.users";
 
     public UserDAO() {
@@ -29,10 +29,7 @@ public class UserDAO implements IUserDAO {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
@@ -41,7 +38,7 @@ public class UserDAO implements IUserDAO {
 
     public void insertUser(User user) throws SQLException {
         System.out.println(INSERT_USERS_SQL);
-        if (user.getName() != "");{
+        if (!user.getName().equals(""));{
             try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
                 preparedStatement.setString(1, user.getName());
                 preparedStatement.setString(2, user.getEmail());

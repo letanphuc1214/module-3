@@ -38,8 +38,12 @@ public class UserServlet extends HttpServlet {
                     break;
                 case "edit":
                     updateUser(request, response);
+                    break;
                 case "search":
                     searchCountry(request,response);
+                    break;
+                case "delete":
+                    deleteUser(request, response);
                     break;
             }
         } catch (SQLException ex) {
@@ -65,7 +69,7 @@ public class UserServlet extends HttpServlet {
                     showEditForm(request, response);
                     break;
                 case "delete":
-                    deleteUser(request, response);
+                    showDeleteForm(request, response);
                     break;
                 case "sort":
                     sortUsersList(request, response);
@@ -121,6 +125,15 @@ public class UserServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         User existingUser = userDAO.getUserById(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
+        request.setAttribute("user", existingUser);
+        dispatcher.forward(request, response);
+
+    }
+    private void showDeleteForm(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        User existingUser = userDAO.getUserById(id);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/delete.jsp");
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
 
